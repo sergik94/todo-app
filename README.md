@@ -13,3 +13,5 @@ The following features are implemented:
   - Group management is implemented using pagination buttons.
   - The current group (page) is displayed in the URL search options bar.
   - If any error occurs, you will receive a corresponding message.
+
+Note: The data on the server will not be updated. The current API only allows you to test code. You can only add one task and will not be able to edit it after that.
