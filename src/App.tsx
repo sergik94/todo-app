@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 
-function App() {
+import { AddingTodo } from './components/AddingTodo';
+import { TodoList } from './components/TodoList';
+import { useAppDispatch } from './app/hooks';
+import { getTodos } from './api';
+import { actions as todosActions } from './features/todos';
+import { Loader } from './components/Loader';
+
+import './App.scss';
+
+export const App: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  async function getTodosFromServer() {
+    setIsLoading(true);
+    setIsError(false);
+
+    try {
+      const data = await getTodos();
+
+      dispatch(todosActions.get(data));
+    } catch (error) {
+      setIsError(true);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    getTodosFromServer();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <div className="app">
+        <div className="app__container _container">
+          <h1 className="app__title">Todos</h1>
 
-export default App;
+          {isLoading && <Loader />}
+          {!isError && !isLoading && (
+            <>
+              <AddingTodo />
+              <TodoList />
+            </>
+          )}
+          {isError && !isLoading && (
+            <p className="app__error">Something went wrong</p>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
