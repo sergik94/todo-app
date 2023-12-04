@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/todo-app/static/css/main.3019bf22.css",
+    "main.js": "/todo-app/static/js/main.0cd8b6fa.js",
+    "static/media/Avoda.ttf": "/todo-app/static/media/Avoda.f42abd36885b3e4015c0.ttf",
+    "static/media/GothamPro-Bold.ttf": "/todo-app/static/media/GothamPro-Bold.764ba13de4409a990823.ttf",
+    "static/media/GothamPro-Medium.ttf": "/todo-app/static/media/GothamPro-Medium.dca4b95d345c2abd8661.ttf",
+    "static/media/GothamPro.ttf": "/todo-app/static/media/GothamPro.4f71921a0823129cd8ba.ttf",
+    "static/media/GothamPro-Black.ttf": "/todo-app/static/media/GothamPro-Black.8c2f478dfa880e2de0a1.ttf",
+    "static/media/delete-red.svg": "/todo-app/static/media/delete-red.89d758b818ac2ae9d734.svg",
+    "static/media/delete-white.svg": "/todo-app/static/media/delete-white.20e118c878a9e2eccbfb.svg",
+    "static/media/accept.svg": "/todo-app/static/media/accept.d870bc19bc9e429053dd.svg",
+    "static/media/edit-blue.svg": "/todo-app/static/media/edit-blue.1a3d8e6c4b07ea11e1e6.svg",
+    "static/media/edit-white.svg": "/todo-app/static/media/edit-white.2619d50110fedbbeeab4.svg",
+    "static/media/cross.svg": "/todo-app/static/media/cross.a420ad6907f7db14f3e6.svg",
+    "static/media/left-black.svg": "/todo-app/static/media/left-black.f544e204f5b32475aeb5.svg",
+    "static/media/right-black.svg": "/todo-app/static/media/right-black.977c10e59f2d7f19a203.svg",
+    "index.html": "/todo-app/index.html",
+    "main.3019bf22.css.map": "/todo-app/static/css/main.3019bf22.css.map",
+    "main.0cd8b6fa.js.map": "/todo-app/static/js/main.0cd8b6fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3019bf22.css",
+    "static/js/main.0cd8b6fa.js"
+  ]
+}
